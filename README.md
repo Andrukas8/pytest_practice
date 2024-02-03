@@ -20,3 +20,7 @@ Tutorial video: [Learn pytest in 6 Hours⏰ | Complete pytest framework Tutorial
 
 ```pytest -m "smoke or integration"``` - will run tests marked as smoke or integration
 
+```pytest --collectonly test_parameters.py``` - will collect and check files classes and functions but does not  run tests
+
+
+

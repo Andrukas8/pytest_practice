@@ -21,11 +21,13 @@ class Test_SoftAssertionsTest(softest.TestCase):
         gender = driver.find_element(By.CSS_SELECTOR, ".genderbutton").text
         age_group = driver.find_element(
             By.CSS_SELECTOR, ".groupradiobutton").text
-                
-        self.soft_assert(self.assertTrue, gender.__contains__("Male"))        
-        self.soft_assert(self.assertTrue, driver.title.__contains__("Selenium"))
-        self.soft_assert(self.assertIn, "5", age_group, "Age Group Is Not Correct")
-                
+
+        self.soft_assert(self.assertTrue, gender.__contains__("Male"))
+        self.soft_assert(
+            self.assertTrue, driver.title.__contains__("Selenium"))
+        self.soft_assert(self.assertIn, "5", age_group,
+                         "Age Group Is Not Correct")
+
         self.assert_all("Verity Genter, Title, Age Group")
-        
+
         driver.quit()

@@ -2,6 +2,8 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+from utilities.test_data import TestData
+
 @pytest.fixture(params=["chrome", "firefox", "edge"])
 def initialize_driver(request):
     if request.param == "chrome":
@@ -16,6 +18,8 @@ def initialize_driver(request):
         driver = webdriver.Edge(options=options)
     request.cls.driver = driver
     print("Browser: ", request.param)
+    driver.get(TestData.url)
+    driver.maximize_window()    
     yield
     print("Close Driver")
     driver.close()

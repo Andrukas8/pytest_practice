@@ -22,5 +22,9 @@ Tutorial video: [Learn pytest in 6 Hours⏰ | Complete pytest framework Tutorial
 
 ```pytest --collectonly test_parameters.py``` - will collect and check files classes and functions but does not  run tests
 
+```pytest tests --html=AutomationPageObjectReport.html``` - will run tests in tests folder and generate HTML report (install Pytest-HTML before that)
+
+
+
 
 
